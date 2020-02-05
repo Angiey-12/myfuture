@@ -1,0 +1,22 @@
+@import "_shared/variables";
+
+:host {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: $zindex-modal - 10;
+}
+
+:host .navbar-logo {
+  width: 150px;
+  display: inline-block;
+}
+
+:host .--sticky {
+  background: $secondary;
+  box-shadow: 0 3px 12px 0 rgba(0,0,0,.08);
+  position: fixed;
+  top: 0;
+  width: 100%;
+}

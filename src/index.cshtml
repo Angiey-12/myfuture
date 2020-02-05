@@ -1,0 +1,95 @@
+@using System.Web.Mvc;
+@using Telerik.Sitefinity.Frontend.Mvc.Helpers;
+@using System.Configuration;
+@using Telerik.Sitefinity.Modules.Pages;
+@using Telerik.Sitefinity.UI.MVC;
+@using Telerik.Sitefinity.Services;
+
+@{
+    if (User.Identity.IsAuthenticated && !SystemManager.IsDesignMode)
+    {
+        Response.Redirect("/userhome#");
+    }
+
+    var gtmCode = ConfigurationManager.AppSettings["GoogleTagManager"];
+    var gtmSingleCode = string.Concat("'", gtmCode, "'");
+}
+
+<!doctype html>
+<html @Html.RenderLangAttribute() class="html">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="referrer" content="always" />
+    <title>myfuture</title>
+
+    <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer',@Html.Raw(gtmSingleCode));</script>
+
+    <!--Framekiller-->
+    <script>
+        if (self == top) {
+            document.documentElement.style.display = 'block';
+        } else {
+            top.location = self.location;
+        }
+    </script>
+    <!--Framekiller ends here-->
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    @Html.Section("head")
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body class="body">
+
+    <noscript>
+        <iframe src="//www.googletagmanager.com/ns.html?id=@gtmCode"
+                height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+
+    <app-root>
+    @Html.Section("top")
+
+    <div class="sfPublicWrapper" id="PublicWrapper">
+        <!-- Header -->
+        <header>
+            <a href="#" id="menu-toggle" aria-label="Menu" type="button" class="hamburger is-closed" data-toggle="offcanvas">
+                <span class="hamb-top"></span>
+                <span class="hamb-middle"></span>
+                <span class="hamb-bottom"></span>
+            </a>
+            <div id="home" class="container">
+                <div class="row">
+                    <div class="col-log-12">
+                        @Html.SfPlaceHolder("InsertLogoHere")
+                    </div>
+                </div>
+            </div>
+            <div>
+                @Html.SfPlaceHolder("InsertSideBarMenuHere")
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        @Html.SfPlaceHolder("InsertMainContentSections")
+
+        <!-- Footer -->
+        <footer class="footer footer-new">
+            <div class="container">
+                @Html.SfPlaceHolder("InsertFooterHere")
+            </div>
+        </footer>
+    </div>
+
+    @Html.Section("bottom")
+  </app-root>
+
+</body>
+</html>

@@ -1,0 +1,269 @@
+{
+	"info": {
+		"_postman_id": "184bdc8e-2a2f-4f3a-a46c-020e43a0e0b0",
+		"name": "Myfuture",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "AuthTocken",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SSO API",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJVc2VybmFtZSI6ImRhdXBhZGlwIiwiRXhwaXJlc09uIjoiXC9EYXRlKDE1NDk1MDY5NzY0MTQpXC8ifQ.cMnIOF7OVtgt2kH9g3UC8_khh0Wc9wat5sYsBh5TpGI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "https://uat.myfuture.edu.au/api/student-data/career-profiles?jurisdiction=ESA",
+					"protocol": "https",
+					"host": [
+						"uat",
+						"myfuture",
+						"edu",
+						"au"
+					],
+					"path": [
+						"api",
+						"student-data",
+						"career-profiles"
+					],
+					"query": [
+						{
+							"key": "jurisdiction",
+							"value": "ESA"
+						},
+						{
+							"key": "activity",
+							"value": "Skills",
+							"disabled": true
+						},
+						{
+							"key": "studentAge",
+							"value": "18",
+							"disabled": true
+						},
+						{
+							"key": "pageSize",
+							"value": "50",
+							"disabled": true
+						},
+						{
+							"key": "pageNumber",
+							"value": "1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "is-sso-compatible",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "pragma",
+						"value": "no-cache"
+					},
+					{
+						"key": "cookie",
+						"value": "X-Mapping-cihhaohp=84A6F735A3A767E68E2C4EF32D303E07; ASP.NET_SessionId=yvsa10mu12imgqnfa4cv3mdy; _ga=GA1.3.407339288.1557367627; _gid=GA1.3.1014279758.1557705083; _dc_gtm_UA-6207210-1=1; _gat_UA-6207210-1=1"
+					},
+					{
+						"key": "origin",
+						"value": "https://myfuture.edu.au"
+					},
+					{
+						"key": "accept-encoding",
+						"value": "gzip, deflate, br"
+					},
+					{
+						"key": "accept-language",
+						"value": "en-GB,en-US;q=0.9,en;q=0.8"
+					},
+					{
+						"key": "user-agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36"
+					},
+					{
+						"key": "content-type",
+						"value": "application/json;charset=UTF-8"
+					},
+					{
+						"key": "accept",
+						"value": "application/json, text/plain, */*"
+					},
+					{
+						"key": "cache-control",
+						"value": "no-cache"
+					},
+					{
+						"key": "authority",
+						"value": "myfuture.edu.au"
+					},
+					{
+						"key": "referer",
+						"value": "https://sit.myfuture.edu.au/login"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"data\":\"snehaf\"}"
+				},
+				"url": {
+					"raw": "https://sit.myfuture.edu.au/api/common/is-sso-compatible",
+					"protocol": "https",
+					"host": [
+						"sit",
+						"myfuture",
+						"edu",
+						"au"
+					],
+					"path": [
+						"api",
+						"common",
+						"is-sso-compatible"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "validate-email",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Change Password ",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Occupation Search",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authority",
+						"value": "myfuture.edu.au"
+					},
+					{
+						"key": "accept",
+						"value": "application/json, text/plain, */*"
+					},
+					{
+						"key": "user-agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36"
+					},
+					{
+						"key": "sec-fetch-site",
+						"value": "same-origin"
+					},
+					{
+						"key": "sec-fetch-mode",
+						"value": "cors"
+					},
+					{
+						"key": "referer",
+						"value": "https://myfuture.edu.au/occupations/search"
+					},
+					{
+						"key": "accept-encoding",
+						"value": "gzip, deflate, br"
+					},
+					{
+						"key": "accept-language",
+						"value": "en-US,en;q=0.9"
+					},
+					{
+						"key": "cookie",
+						"value": "X-Mapping-cihhaohp=A3A2243482AD687091145D3F8468B407; _ga=GA1.3.1751229926.1580253038; _gid=GA1.3.1994166509.1580253038; _hjid=f0c4393c-0b42-4f08-9624-5ea317458fd5; _hjIncludedInSample=1; ASP.NET_SessionId=lwonihdgrwc3jegsbkbmcopr; .ASPXAUTH=B4F7181A31C57B22AC9D993951C0D94980C433467DCA2D709CA4590DB51D84FEF9397C56379C62A0BD002B12025238B493C247E4AB5B2BD197701AA190268D4FA81F492216E29A9BD357AC172EDD6A47CF87AD67451F8610487F5237AA930BA86591CEC62F3D66FBA36897214569D73A; SF-TokenId=53c5bf96-c7fc-489a-8796-ddf769385701; .AspNet.Cookies=Rn5QjSIWk4jaMIG2wnQhHnHOvTQKzQP0yhI1tsSCPCFlnik901XAZFuaTAgXRdiSHORTOJFNKvSaHCf2_HoRg8EdKbzoC-_UpsrNkORuZT7QYmbsOjVJNfnbSG7j5qqS7dGjIcceQ08aVLDL81PghwckGw7cqyj7_lzsM4wYAiEnYQBcYl0byvbc1i42PZ-HJHoqDlH4-T9abR97wXCjhEFULqdL0k4Kgi0m1XgHLJCeHdYQ2-oxevAIgPthxT8fRt-tksXxHSChH7KRpPOiuMjYSGaZs9C1O4F1amOcTezdqRTv_tLp4Lf0v4jjy0iQKR2bUIjR3uckPBAAAV5R8O8Y2R4WAujsJ5ZZ3cAiuP0mAKGpbvQHZQsAlKZNywVH91YMTPF87_0yEM-Lg8GvTd7ydJ_DCyLH8D9Sg8cFhCt8wOWxLrN2FtFeeq5OAnxPhMa6UzbV05I9YJoy9A2qZ-ZH_M5Cr6FNprkJh0alRNnd1lWM9jwnpdjr6CGN9AcdnH-tvVdBZ_APDrlFRHy73WY_W9yo_--CJvjvCb4VA8N03vb3docc_iwiryhBnJe6xw-iDeEyY6ebRA3fAM0-vCbO26r4bLQg8lWLYlpZVRR9FFNtb49W3ioABBzDdsPr5WyM0NOZyc-kAayfCpnPikElEDHhTI387elPhLA6glGvdwP3gQQTwKgjVEwH5Uo0_BZ08uW8tlKleWGRLBj4MjINu-4Vi0LchXZwO3S6whkjYguFzkJ7NYqFC6d--LrZGc8xiYBfi7OLL5BKlEePgBiF4ql6l83oVSL5O_tEpbfMSEeQmu--gNu5QNvY9pZek0h3-ZTezN_2ovpg-hWM7u0UKjPRRZtkpd_3qf4KNuW53wt9HpagsGF-xgMZosbLrQuqls2CJ2gpyMKbuFXNyzTbbHa9wql_azcfwHUVaUOJ3eqrUDInTHN1XeygybVwof3WtLqu2YNXvEriVe7fgXAhjF44znmdBHOjKvFKFcVv7eFmLF1JQDHx-sYVs6KTHOp5dpymLEy-_LqHUaiGQx2HuLIbvWmStOTP-5dqTN_OoWMKjOw6C-I7wSxCcy7-JMONhUEAZ4m3kzgddeebKiM7AgHqKZvwjIIwDUgW0iQGssnL4lKxIAIHtNIxtsXRQQXxJsK6qWsLHlMPt1JJ80GtgBzQI0a_gR8GIPIjcnA; _dc_gtm_UA-6207210-1=1"
+					}
+				],
+				"url": {
+					"raw": "https://myfuture.edu.au/api/occupation/search?keyword=doctor&pageNumber=1&pageSize=10&indexName=Global",
+					"protocol": "https",
+					"host": [
+						"myfuture",
+						"edu",
+						"au"
+					],
+					"path": [
+						"api",
+						"occupation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "keyword",
+							"value": "doctor"
+						},
+						{
+							"key": "pageNumber",
+							"value": "1"
+						},
+						{
+							"key": "pageSize",
+							"value": "10"
+						},
+						{
+							"key": "indexName",
+							"value": "Global"
+						},
+						{
+							"key": null,
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

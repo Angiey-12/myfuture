@@ -1,0 +1,160 @@
+<main>
+    <div class="container-1 align-items-center container py-sm shape-container">
+        <div class="row">
+            <div class="col-lg-8 col-md-8 col-xs-12 col-sm-12">
+                <p><a>Study and training  /</a></p>
+                <h1>Institutions</h1>
+                <p class="lead text-muted">
+                    According to the National Oceanic and Atmospheric Administration, Ted, Scambos, NSIDClead scentist, puts the potentially record maximum.
+                </p>
+                <h5>
+                    Use the filters to help you find the right institution for you.
+                </h5>
+                <div class="row">
+                    <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12">
+                        <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                            <p class="filter-group">Locations</p>
+                            <div class="btn-group mr-2" role="group" aria-label="First group">
+                                <button (click)="getLocation(location.value)" *ngFor="let location of locations" type="button" class="btn btn-primary btn-sm btn-locations">
+                                    {{ location.label }}
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12">
+                        <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                            <p class="filter-group">Sectors</p>
+                            <div class="btn-group mr-2" role="group" aria-label="First group">
+                                <button (click)="getSector(sector.value)" *ngFor="let sector of sectors" type="button" class="btn btn-primary btn-sm btn-sectors">
+                                    {{ sector.label }}
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-xs-12 col-sm-12">
+            </div>
+        </div>
+        <div class="">
+            <p class="text-muted result-text"><b>{{numberOfResult}}</b> institutions found.</p>
+        </div>
+    </div>
+    <div class="partner-area py-5">
+        <div class=" align-items-center container shape-container">
+            <h2>Lorem ipsum dolor sit amet</h2>
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 p-1" *ngFor="let result of results">
+                    <div class="card bg-secondary text-white m-1 p-2 card-results">
+                        <div class="card-body">
+                            <img class="place-holder" src="{{result.image}}">
+                            <p class="card-text result-description">{{result.description}}</p>
+                        </div>
+                        <div class="card-footer card-results-footer">
+                            <footer><a class="card-text" (click)="open(classic,'' , '')">learn more</a></footer>
+                        </div>
+
+                        <ng-template #classic let-c="close" let-d="dismiss">
+                            <div class="modal-content">
+                                <div class="row offer-hearder">
+                                    <div class="col-3 tablinks"><button class="tablink-active btn-lg btn-block tab-btn" id="details-tab" (click)="change('details')">Details</button></div>
+                                    <div class="col-4 tablinks"><button class="tablink btn-lg btn-block tab-btn" id="courses-tab" (click)="change('courses')">Courses they offer</button></div>
+                                    <div class="col-5">
+                                        <button class="btn-lg btn-close close float-right" data-dismiss="modal" aria-label="Close" (click)="d('Cross click')">
+                                        Close ×
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="elink" id="details">
+                                        <p>{{result.schoolname}}</p>
+                                        <p>{{result.description}}</p>
+                                    </div>
+                                    <div class="elink" id="courses" style="display:none">
+                                        <p>These are a few of the courses {{result.schoolname}} has to offer.</p>
+                                        <div class="row">
+                                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-6 p-1" *ngFor="let course of result.courses">
+                                                <div class="card m-1">
+                                                    <div class="card-body p-1">
+                                                        <h5 class="card-title">{{course.name}}</h5>
+                                                        <p class="card-text">{{course.description}}</p>
+                                                        <a class="card-link">Learn more</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary">Visit website -></button>
+                                </div>
+                            </div>
+                        </ng-template>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class=" align-items-center container shape-container py-5">
+        <h2>Lorem ipsum dolor sit amet</h2>
+
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 p-1" *ngFor="let result of results">
+                <div class="card bg-secondary text-white m-1 p-2 card-results">
+                    <div class="card-body">
+                        <img class="place-holder" src="{{result.image}}">
+                        <p class="card-text result-description">{{result.description}}</p>
+                    </div>
+                    <div class="card-footer card-results-footer">
+                        <footer><a class="card-text" (click)="open(classic,'' , '')">learn more</a></footer>
+                    </div>
+
+                    <ng-template #classic let-c="close" let-d="dismiss">
+                        <div class="modal-content">
+                            <div class="row offer-hearder">
+                                <div class="col-3 tablinks"><button class="tablink-active btn-lg btn-block tab-btn" id="details-tab" (click)="change('details')">Details</button></div>
+                                <div class="col-4 tablinks"><button class="tablink btn-lg btn-block tab-btn" id="courses-tab" (click)="change('courses')">Courses they offer</button></div>
+                                <div class="col-5">
+                                    <button class="btn-lg btn-close close float-right" data-dismiss="modal" aria-label="Close" (click)="d('Cross click')">
+                                        Close ×
+                                        </button>
+                                </div>
+                            </div>
+                            <div class="modal-body">
+                                <div class="elink" id="details">
+                                    <p>{{result.schoolname}}</p>
+                                    <p>{{result.description}}</p>
+                                </div>
+                                <div class="elink" id="courses" style="display:none">
+                                    <p>These are a few of the courses {{result.schoolname}} has to offer.</p>
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-6 p-1" *ngFor="let course of result.courses">
+                                            <div class="card m-1">
+                                                <div class="card-body p-1">
+                                                    <h5 class="card-title">{{course.name}}</h5>
+                                                    <p class="card-text">{{course.description}}</p>
+                                                    <a class="card-link">Learn more</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary">Visit website -></button>
+                            </div>
+                        </div>
+                    </ng-template>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="bottom-area">
+        <img src="...">
+        <h2><b>Are you looking for organisations that provide on-the-job training and volunteering instead?</b></h2>
+        <button type="button" class="btn btn-primary btn-round">View organisations -></button>
+    </div>
+</main>

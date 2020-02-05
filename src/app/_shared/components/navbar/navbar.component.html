@@ -1,0 +1,96 @@
+<nav id="navbar-main" class="navbar navbar-main navbar-expand-lg navbar-transparent navbar-light headroom headroom--top" [class.--sticky]="isVisible">
+    <a class="navbar-brand mr-lg-5" [routerLink]="['/home']">
+        <app-logo-myfuture class="navbar-logo"></app-logo-myfuture>
+    </a>
+    <button class="navbar-toggler" type="button" (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed" aria-controls="navbar_global">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="navbar-collapse collapse" id="navbar_global" [ngbCollapse]="isCollapsed">
+        <div class="navbar-collapse-header">
+            <div class="row">
+                <div class="col-6 collapse-brand">
+                    <a [routerLink]="['/home']">
+                        <app-logo-myfuture></app-logo-myfuture>
+                    </a>
+                </div>
+                <div class="col-6 collapse-close">
+                    <button type="button" class="navbar-toggler" (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed" aria-controls="navbar_global">
+              <span></span>
+              <span></span>
+            </button>
+                </div>
+            </div>
+        </div>
+        <ul class="navbar-nav navbar-nav-hover align-items-lg-center">
+            <li class="nav-item dropdown">
+                <a class="nav-link no-caret" data-toggle="dropdown" role="button">
+                    <i class="ni ni-ui-04 d-lg-none"></i>
+                    <span class="nav-link-inner--text">Get some ideas</span>
+                </a>
+                <div class="dropdown-menu-xl dropdown-menu">
+                    <div class="dropdown-menu-inner">
+                        <a routerLinkActive="active" [routerLink]="['/career-profile']" class="media d-flex align-items-center">
+                            <span class="icon icon-shape bg-gradient-primary rounded-circle text-white">
+                  <i class="ni ni-spaceship"></i>
+                </span>
+                            <span class="media-body ml-3">
+                  <span class="heading text-primary mb-md-1">Build your career profile</span>
+                            <span class="description d-none d-md-inline-block mb-0">Identify your interests and skills, and occupations suited to them</span>
+                            </span>
+                        </a>
+                        <a routerLinkActive="active" [routerLink]="['/career-bullseyes']" class="media d-flex align-items-center">
+                            <span class="icon icon-shape bg-gradient-success rounded-circle text-white">
+                  <i class="ni ni-palette"></i>
+                </span>
+                            <span class="media-body ml-3">
+                  <span class="heading text-primary mb-md-1">Career bullseyes</span>
+                            <span class="description d-none d-md-inline-block mb-0">See what occupations match your current/future qualifications</span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link no-caret" data-toggle="dropdown" role="button">
+                    <i class="ni ni-collection d-lg-none"></i>
+                    <span class="nav-link-inner--text">Jobs and careers</span>
+                </a>
+                <div class="dropdown-menu">
+                    <a [routerLink]="['/occupations']" routerLinkActive="active" class="dropdown-item">Occupations</a>
+                    <a [routerLink]="['/industries']" class="dropdown-item">Industries</a>
+                    <a [routerLink]="['/case-studies']" class="dropdown-item">Case studies</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link no-caret" data-toggle="dropdown" role="button">
+                    <i class="ni ni-collection d-lg-none"></i>
+                    <span class="nav-link-inner--text">Study and training</span>
+                </a>
+                <div class="dropdown-menu">
+                    <a [routerLink]="['/courses']" class="dropdown-item">Courses</a>
+                    <a [routerLink]="['/institutions']" class="dropdown-item">Institutions</a>
+                    <a [routerLink]="['/organisations']" class="dropdown-item">Organisations</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link no-caret" data-toggle="dropdown" role="button">
+                    <i class="ni ni-collection d-lg-none"></i>
+                    <span class="nav-link-inner--text">Career advice</span>
+                </a>
+                <div class="dropdown-menu">
+                    <a [routerLink]="['/landing']" class="dropdown-item">Landing</a>
+                    <a [routerLink]="['/user-profile']" class="dropdown-item">Profile</a>
+                    <a [routerLink]="['/login']" class="dropdown-item">Login</a>
+                    <a [routerLink]="['/register']" class="dropdown-item">Register</a>
+                </div>
+            </li>
+        </ul>
+        <ul class="navbar-nav align-items-lg-center ml-lg-auto">
+            <li class="nav-item d-none d-lg-block ml-lg-4">
+                <a href="#" target="_blank" class="btn btn-neutral btn-icon">
+                    <span class="nav-link-inner--text">Sign up</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>

@@ -1,0 +1,245 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "_shared/variables";
+@import "_shared/reset";
+@import "argon";
+@import "_shared/typography";
+@import "_shared/layout";
+@import "_shared/utilities";
+@import "~bootstrap/dist/css/bootstrap.css";
+.container-1 {
+    margin-top: 80px;
+}
+
+// .filter-group {}
+.offer-hearder {
+    background: none !important;
+    background-color: transparent !important;
+    padding: 0px;
+    margin: 0px !important;
+}
+
+.close-text {
+    margin: 0px !important;
+}
+
+.offer-content {
+    background-color: transparent !important;
+    background: none !important;
+}
+
+.modal-content {
+    background-color: transparent !important;
+    background: none !important;
+    border-top: none;
+    box-shadow: none;
+    // width: 800px;
+}
+
+.modal-body {
+    background-color: #fff;
+}
+
+.modal-footer {
+    background-color: #fff;
+}
+
+.tablinks {
+    padding: 0px;
+}
+
+.tablink {
+    border: none;
+    background-color: transparent;
+    color: #fff;
+}
+
+.tablink-active {
+    background-color: #fff;
+    border: none;
+    color: #000;
+}
+
+.place-holder {
+    width: 150px;
+}
+
+.result-text {
+    margin-top: 10px !important;
+}
+
+.tab-btn {
+    border-radius: 0;
+}
+
+.tab-btn:focus {
+    outline: none;
+    height: 100%;
+}
+
+.btn-close {
+    margin-top: 20px;
+    color: #fff;
+}
+
+.bottom-area {
+    text-align: center;
+    background: whitesmoke;
+    margin-top: 50px;
+    padding: 100px;
+}
+
+.btn-round {
+    border-radius: 50px;
+}
+
+.card-results {
+    height: 100%;
+}
+
+.card-results-footer {
+    background-color: transparent
+}
+
+.result-description {
+    margin-top: 10px !important;
+}
+
+.line {
+    border-top: 1px solid $white;
+}
+
+.footer-list {
+    list-style-type: none;
+}
+
+.ul-header {
+    color: $white;
+}
+
+.pl-6 {
+    padding-left: 40px;
+}
+
+.footer-container a {
+    color: $white;
+    text-decoration: none;
+}
+
+.tag-square {
+    background-color: $sky;
+    color: $umbra;
+    text-align: center;
+    border-radius: 5px;
+    padding: 0.5rem 0.75rem;
+}
+
+.bottom-area-static {
+    background-color: whitesmoke;
+    margin-top: 50px;
+    padding: 100px 200px;
+}
+
+.bottom-area-static .card {
+    height: 100%;
+    border-radius: 10px;
+}
+
+.bottom-area-static .card-body {
+    padding-bottom: 10px;
+}
+
+.partner-area {
+    background-color: whitesmoke;
+}
+
+.occupation-nav {
+    margin-top: 84px;
+    background: #105469;
+    box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.08);
+    width: 100%
+}
+
+.btn-occupation-nav {
+    background: none;
+    border-radius: 10px;
+    color: $white;
+    border: none;
+}
+
+.btn-occupation-nav:hover {
+    background-color: $white;
+    color: #105469;
+    border-radius: 10px;
+}
+
+.btn-occupation-nav:focus {
+    border: none;
+}
+
+.btn-occupation-nav:active {
+    border: none;
+}
+
+.occupation-nav-search-input {
+    width: 50%;
+}
+
+.btn-occupation-search {
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border: none;
+    box-shadow: none;
+}
+
+.occupation-container {
+    background-color: #E9E9E9;
+}
+
+.tips-block {
+    background-color: $white;
+    border-radius: 10px;
+}
+
+.occupation-footer-container {
+    background-color: #F4F4F4;
+}
+
+.occupation-footer-btn {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: none;
+    box-shadow: none;
+}
+
+.occupation-footer-list {
+    list-style: none;
+}
+
+.occupation-footer-list li {
+    margin: 0 0 10px 0;
+}
+
+.text-muted-card {
+    font-size: 0.75rem;
+}
+
+.card-description {
+    height: 100%;
+    border-radius: 5px;
+}
+
+.white-container {
+    background-color: $white;
+}
+
+.b-line {
+    border-left: solid 2px whitesmoke
+}
+
+.tag-container {
+    background-color: #ECECEC;
+    padding: 5px 10px;
+    margin: 0 5px;
+    border-radius: 10px;
+}
