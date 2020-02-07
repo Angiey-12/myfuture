@@ -1,0 +1,88 @@
+<main>
+    <div class="occupation-container ">
+        <div class="align-items-center container py-sm shape-container">
+            <div class="row">
+                <div class="col-lg-8 col-md-8 col-xs-12 col-sm-12">
+                    <h1>Occupations</h1>
+                    <p class="lead text-muted">
+                        According to the National Oceanic and Atmospheric Administration, Ted, Scambos, NSIDClead scentist, puts the potentially record maximum.
+                    </p>
+                    <div class="tips-block p-2">
+                        <p class="mb-0 text-muted"><b>Tip</b> Get personalised recommendations using our <a>Build you career profile</a> tool.</p>
+                    </div>
+                    <p class="mt-5"><b>In this section:</b></p>
+                    <div class="row">
+                        <div class="col-4 mb-2">
+                            <a>Trending occupations</a>
+                        </div>
+                        <div class="col-4 mb-2">
+                            <a>Explore by interest areas</a>
+                        </div>
+                        <div class="col-4 mb-2">
+                            <a>Career guidance and advice</a>
+                        </div>
+                        <div class="col-4 mb-2">
+                            <a>Skills shortage occupations</a>
+                        </div>
+                        <div class="col-4 mb-2">
+                            <a>Browse by lorem ipsum</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-xs-12 col-sm-12"></div>
+            </div>
+        </div>
+        <div class="align-items-center occupation-landing px-lg">
+            <div class="my-5">
+                <h2>Trending occupations</h2>
+                <p></p>
+                <div class="row">
+                    <div class="col-3"></div>
+                </div>
+            </div>
+            <div class="my-5">
+                <h2>Skills shortage occupations</h2>
+                <p></p>
+                <div class="row">
+                    <div class="col-3"></div>
+                </div>
+            </div>
+            <div class="my-5">
+                <h2>Explore occupations by interest areas</h2>
+                <p></p>
+                <div class="row">
+                    <div class="col" *ngFor="let area of interestareas">
+                        <div class="card text-center card-description">
+                            <img class="card-img-top" alt="Card image cap">
+                            <div class="card-body p-1">
+                                <h5 class="card-title"><a routerLink="{{area.value}}">{{area.label}}</a></h5>
+                                <p class="mb-0 text-muted-card">{{area.description}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tips-block p-2 mt-3">
+                    <p class="mb-0 text-muted"><b>Tip</b> Gather insights into your interests with our <a>Interests profile</a> tool and discover your strengths in our <a> Skills profile</a> tool</p>
+                </div>
+            </div>
+            <div class="mt-5 mb-0">
+                <h2>Browse occupations by Lorem ipsum</h2>
+                <p></p>
+                <div class="row">
+                    <div class="col-2"></div>
+                    <div class="col-2"></div>
+                    <div class="col-2"></div>
+                    <div class="col-2"></div>
+                    <div class="col-2"></div>
+                    <div class="col-2"></div>
+                    <div class="col-2"></div>
+                    <div class="col-2"></div>
+                    <div class="col-2"></div>
+                    <div class="col-2"></div>
+                    <div class="col-2"></div>
+                    <div class="col-2"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

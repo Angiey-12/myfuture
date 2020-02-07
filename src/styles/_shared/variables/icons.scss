@@ -1,0 +1,32 @@
+/** ICONS **/
+/** Please refer to the style guide to learn what each icon is used for and why **/
+
+/*
+  Material Icons
+  Please use <mat-icon> for icons that will definitely not change or are compeltely obvious.
+  All other icons should be referenced here so others know the context and can use it in
+  future applications as a variable.
+*/
+
+// Actions
+$icon-call-to-action: '\e5c8';
+$icon-close: '\e5cd';
+$icon-remove: '\e5cd';
+$icon-external-link: '\e89e';
+$icon-menu-toggle: '\e5d2';
+$icon-play-media: '\e037';
+$icon-search: '\e8b6';
+$icon-read-more: '\e5cf';
+$icon-export: '\e2c4';
+$icon-calendar: '\e916';
+
+// Statuses
+$icon-payment-reminder: '\e191';
+$icon-finished-activity: '\e5ca';
+
+// Microinteractions
+$icon-is-favourite: '\e838';
+$icon-sort-indicator: '\e83a';
+$icon-collapse-indicator: $icon-read-more;
+
+

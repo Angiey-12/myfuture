@@ -1,0 +1,126 @@
+<main>
+    <div class="occupation-container p-lg">
+        <div class="row">
+            <div class="col-4 px-md">
+                <p>Explore by interests/skills</p>
+                <div class="row">
+                    <div class="col-3" *ngFor="let area of interestareas">
+                        <div class="card text-center p-1 m-1">
+                            <img class="card-img-top" alt="">
+                            <p class="mb-0 text-muted-card">{{area.label}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tips-block p-2 mt-2">
+                    <p class="mb-0 text-muted"><b>Tip</b></p>
+                    <p class="mb-0 text-muted-card"> Complete <a href="">My Career Profile </a>to find out more about your interests and skills.</p>
+                </div>
+                <div class="mt-2">
+                    <p class="mb-0 text-muted">Learning ares</p>
+                    <button class="btn btn-white btn-sm btn-block text-left">Art</button>
+                    <button class="btn btn-white btn-sm btn-block text-left">Automotive</button>
+                    <button class="btn btn-white btn-sm btn-block text-left">Biology</button>
+                    <button class="btn btn-white btn-sm btn-block text-left">Business Studies</button>
+                    <button class="btn btn-white btn-sm btn-block text-left">Chemistry</button>
+                    <button class="btn btn-white btn-sm btn-block text-left">Community Services</button>
+                    <button class="btn btn-white btn-sm btn-block text-left">Computing</button>
+                    <div class="text-center mt-3">
+                        <button class="btn btn-primary btn-md rounded">Show more</button>
+                    </div>
+                </div>
+                <div class="mt-2">
+                    <p class="mb-0 text-muted">Explore by <b>skill level</b></p>
+                    <div class="tips-block p-2 my-2">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                                Certificate I or compulsory secondary education 
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="tips-block p-2 my-2">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                                    Certificate II or III
+                                </label>
+                        </div>
+                    </div>
+
+                    <div class="tips-block p-2 my-2">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                                    Certificate II or III
+                                </label>
+                        </div>
+                    </div>
+
+                    <div class="tips-block p-2 my-2">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                                    Certificate III or IV
+                                </label>
+                        </div>
+                    </div>
+
+                    <div class="tips-block p-2 my-2">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                                    Associate Degree, Advanced Diploma or Diploma
+                                </label>
+                        </div>
+                    </div>
+
+                    <div class="tips-block p-2 my-2">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                                    Bachelor Degree or higher qualification
+                                </label>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="mt-2">
+                    <p class="mb-0 text-muted">Explore by <b>work conditions</b></p>
+                    <div class="tips-block p-2">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                                Avoid bending or twisting the body
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-8 px-md">
+                <div class="media mt-sm white-container p-4" *ngFor="let list of results">
+                    <img class="align-self-center mr-3" src="...">
+                    <div class="media-body">
+                        <h2 class="mb-0 display-2"><a [routerLink]="[list.prefLabel]">{{list.prefLabel}}</a></h2>
+                        <p>Qualification - Bachelor degree or higher qualification</p>
+                        <div class="row">
+                            <div class="col-6">
+                                <p class="mb-1">Average weekly pay - $1,909</p>
+                                <p class="mb-1">Future growth - Strong</p>
+                                <p class="mb-1">Licensing or registration required</p>
+                            </div>
+                            <div class="col-6">
+                                <p class="mb-0">Jobs titles included: </p>
+                                <div class="row pl-1">
+                                    <div class="col-flex my-2"><span class="tag-container">Doctors</span></div>
+                                    <div class="col-flex my-2"><span class="tag-container">Health care professionals</span></div>
+                                    <div class="col-flex my-2"><span class="tag-container">Health care providers</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

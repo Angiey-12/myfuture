@@ -1,0 +1,28 @@
+/** LAYOUT **/
+/** Please refer to the style guide for more information **/
+
+/** GRID **/
+$grid-breakpoints: (
+  xxxs: 0,
+  xxs: 320px,
+  xs: 568px,
+  sm: 667px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xl-after: 1201px,
+  xxl: 1440px,
+  xxxl: 1600px
+);
+
+/** WIDTHS **/
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1380px,
+  xxxl: 1540px
+);
+
+$default-page-max-width: map-get($container-max-widths, 'xxxl') / 2;

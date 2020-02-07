@@ -1,0 +1,7 @@
+@import "_shared/variables";
+
+:host {
+  display: block;
+  max-width: $default-page-max-width;
+  margin: 0 auto;
+}

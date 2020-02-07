@@ -1,0 +1,39 @@
+/** COLOURS **/
+/** Please refer to the style guide to learn what each colour is used for and why **/
+$sky: #32C0C7;
+$sway: #168F9A;
+$crescent: #0E7BC4;
+$ocean: #1B6175;
+$deep: #105469;
+$escape: linear-gradient(90deg, #{$ocean} 0%, #{$sky} 100%);
+
+$verb: #74617E;
+$shade: #545F73;
+$cosmo: #DCCFDA;
+
+$umbra: #58585A;
+
+$cloud: #F6F6F6;
+$white: #FFFFFF;
+
+/**
+  Validation
+  The following validation errors are currently using bootstrap variables, which are WCAG compliant:
+  - Error
+  - Warning
+  - Success
+  - Informative
+**/
+$green:   #28a745;
+$teal:    #279296;
+$cyan:    #17a2b8;
+$completed: #279296;
+
+/** Bootstrap overrides **/
+$primary: $sky;
+$secondary: $deep;
+
+$body-bg: $white;
+$body-color: $umbra;
+
+$link-color: $sway;

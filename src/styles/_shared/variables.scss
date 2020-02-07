@@ -1,0 +1,17 @@
+@import "~@angular/material/_theming.scss";
+
+@import "variables/colours";
+@import "variables/icons";
+@import "variables/typography";
+@import "variables/components";
+@import "variables/layout";
+
+@import "argon/functions";
+@import "~bootstrap/scss/functions";
+
+@import "argon/variables";
+@import "~bootstrap/scss/variables";
+
+@import "argon/mixins";
+@import "~bootstrap/scss/mixins";
+@import "mixins";
